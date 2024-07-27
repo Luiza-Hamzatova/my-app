@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Task__one = () => {
+const TaskOne = () => {
   const [counter, setCounter] = useState(0);
   const [isDisibledOneBtn, setIsDisibledOneBtn] = useState(false);
   const [isDisibledTwoBtn, setIsDisibledTwoBtn] = useState(true);
@@ -43,4 +43,4 @@ const Task__one = () => {
     </div>
   );
 };
-export default Task__one;
+export default TaskOne;

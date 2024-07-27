@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-const Task__two = () => {
+const TaskTwo = () => {
   const [fahrenheit, setFahrenheit] = useState("");
   const [celsius, setCelsius] = useState("");
-  const convert = (setFahrenheit) => {
+  const convert = (fahrenheit) => {
     if (fahrenheit === "") {
       setCelsius("");
     } else {
-      setCelsius = (fahrenheit - 32) / 1.8;
+      setCelsius((fahrenheit - 32) / 1.8);
     }
   };
   return (
@@ -15,10 +15,13 @@ const Task__two = () => {
         type="number"
         placeholder="Fahrenheit"
         value={fahrenheit}
-        onChange={(event) => setFahrenheit(event.target.value)}
+        onChange={(event) => {
+          setFahrenheit(event.target.value);
+          convert(event.target.value);
+        }}
       />
       <input
-        type="number"
+        type="text"
         placeholder="Celsius"
         value={celsius}
         onChange={(event) => setCelsius(event.target.value)}
@@ -26,4 +29,4 @@ const Task__two = () => {
     </div>
   );
 };
-export default Task__two;
+export default TaskTwo;
