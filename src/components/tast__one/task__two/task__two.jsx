@@ -3,7 +3,11 @@ const Task__two = () => {
   const [fahrenheit, setFahrenheit] = useState("");
   const [celsius, setCelsius] = useState("");
   const convert = (setFahrenheit) => {
-    setCelsius = (setFahrenheit - 32) / 1.8;
+    if (fahrenheit === "") {
+      setCelsius("");
+    } else {
+      setCelsius = (fahrenheit - 32) / 1.8;
+    }
   };
   return (
     <div className="wrapper">
@@ -12,7 +16,6 @@ const Task__two = () => {
         placeholder="Fahrenheit"
         value={fahrenheit}
         onChange={(event) => setFahrenheit(event.target.value)}
-        
       />
       <input
         type="number"
