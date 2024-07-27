@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const TaskThree = () => {
-  const colors = ["#111111", "#334499"];
+  const colors = ["#fff0f5", "#f0f8ff",'#ffffff'];
   const [color, setColor] = useState(0);
   const changeColor = () => {
     setColor((color + 1) % colors.length);
